@@ -2,16 +2,20 @@
 
 int main(void)
 {
-    char c;
-    char next;
+    float a, b;
 
-    printf("enter a character : ");
-    scanf(" %c", &c);
+    printf("Enter numerator : ");
+    scanf("%f", &a);
 
-    next = c + 1;
+    printf("Enter denominator : ");
+    scanf("%f", &b);
 
-    printf("the next character of %c (%i) is %c (%i)\n",
-           c, c, next, next);
+    if (b == 0) {
+        printf("Cannot divide by zero.\n");
+        return 1;
+    }
+
+    printf("Result : %f\n", a / b);
 
     return 0;
 }
